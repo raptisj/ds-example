@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Button from "./components/Button";
+import Grid from "./components/Grid";
+import { color, radius } from "./theme";
 
 function App() {
+  const click = () => {
+    console.log("heyyyy!!!!");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Design System</h1>
+      <hr />
+      <h2>Buttons</h2>
+      <Grid width="800px">
+        <Button onClick={click} color={color.white} radius={radius.medium}>
+          Button
+        </Button>
+        <Button onClick={click} color={color.white} radius={radius.hard}>
+          Button
+        </Button>
+      </Grid>
     </div>
   );
 }
